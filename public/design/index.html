@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>АСКУЭ - ОАО "Чакан ГЭС"</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App Icons -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <!--Morris Chart CSS -->
+        <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <!-- Loader -->
+        <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+        <header id="topnav">
+            <div class="topbar-main">
+                <div class="container-fluid">
+                    <div class="logo">
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo-sm.png" alt="" height="22" class="logo-small">
+                            <img src="assets/images/logo.png" alt="" height="24" class="logo-large">
+                        </a>
+
+                    </div>
+                    <div class="menu-extras topbar-custom">
+                        <ul class="list-inline float-right mb-0">
+                            <!-- User-->
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
+                                   aria-haspopup="false" aria-expanded="false">
+                                    <img src="assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                    <a class="dropdown-item" href="#"><i class="dripicons-user text-muted"></i> Profile</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="dripicons-exit text-muted"></i> Logout</a>
+                                </div>
+                            </li>
+                            <li class="menu-item list-inline-item">
+                                <!-- Mobile menu toggle-->
+                                <a class="navbar-toggle nav-link">
+                                    <div class="lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </a>
+                                <!-- End mobile menu toggle-->
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- end menu-extras -->
+
+                    <div class="clearfix"></div>
+
+                </div> <!-- end container -->
+            </div>
+            <!-- end topbar-main -->
+
+            <!-- MENU Start -->
+            <div class="navbar-custom">
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+
+                            <li class="has-submenu">
+                                <a href="index.html"><i class="ti-home"></i>Dashboard</a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"><i class="ti-light-bulb"></i>Отчёты</a>
+                            </li>
+
+
+                        </ul>
+                        <!-- End navigation menu -->
+                    </div> <!-- end #navigation -->
+                </div> <!-- end container -->
+            </div> <!-- end navbar-custom -->
+        </header>
+        <!-- End Navigation Bar-->
+
+
+        <div class="wrapper">
+            <div class="container-fluid">
+
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <h4 class="page-title">Dashboard</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title end breadcrumb -->
+
+
+                <div class="row">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="mini-stat clearfix bg-white">
+                            <span class="mini-stat-icon bg-danger"><i class="mdi mdi-map-marker-multiple text-white"></i></span>
+                            <div class="mini-stat-info text-right text-muted">
+                                <span class="counter text-danger">ГЭС-3. Фидер 6 (Шоро)</span>
+                                Расположение
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="mini-stat clearfix bg-blue">
+                            <span class="mini-stat-icon bg-light"><i class="mdi mdi-numeric text-blue"></i></span>
+                            <div class="mini-stat-info text-right text-white">
+                                <span class="counter text-white">610102169</span>
+                                Серийный номер
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="mini-stat clearfix bg-white">
+                            <span class="mini-stat-icon bg-warning"><i class="mdi mdi-calculator text-white"></i></span>
+                            <div class="mini-stat-info text-right text-muted">
+                                <span class="counter text-warning">11420,4585</span>
+                                Последние показания счетчика
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="mini-stat clearfix bg-info">
+                            <span class="mini-stat-icon bg-light"><i class="mdi mdi-calendar-clock text-info"></i></span>
+                            <div class="mini-stat-info text-right text-light">
+                                <span class="counter text-white">30.07.2018 14:20</span>
+                                Последнее обновление
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+<div class="row">
+
+                    <div class="col-xl-8">
+                        <div class="card m-b-30">
+                            <div class="card-body">
+                                <h4 class="mt-0 m-b-15 header-title">Последние 7 дней</h4>
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover mb-0">
+                                        <thead>
+                                        <tr>
+                                            <th>Дата</th>
+                                            <th>Время</th>
+                                            <th>Показание (активная энергия +)</th>
+                                            <th>Показание (реактивная энергия + )</th>
+                                            <th>Действия</th>
+                                        </tr>
+
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>30.07.2018</td>
+                                            <td>23:59</td>
+                                            <td>123436</td>
+                                            <td>3412</td>
+                                            <td><button class="btn-block background-blue">Подробнее</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>30.07.2018</td>
+                                            <td>23:59</td>
+                                            <td>123436</td>
+                                            <td>3412</td>
+                                            <td><button class="btn-block background-blue">Подробнее</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>30.07.2018</td>
+                                            <td>23:59</td>
+                                            <td>123436</td>
+                                            <td>3412</td>
+                                            <td><button class="btn-block background-blue">Подробнее</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>30.07.2018</td>
+                                            <td>23:59</td>
+                                            <td>123436</td>
+                                            <td>3412</td>
+                                            <td><button class="btn-block background-blue">Подробнее</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>30.07.2018</td>
+                                            <td>23:59</td>
+                                            <td>123436</td>
+                                            <td>3412</td>
+                                            <td><button class="btn-block background-blue">Подробнее</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>30.07.2018</td>
+                                            <td>23:59</td>
+                                            <td>123436</td>
+                                            <td>3412</td>
+                                            <td><button class="btn-block background-blue">Подробнее</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>30.07.2018</td>
+                                            <td>23:59</td>
+                                            <td>123436</td>
+                                            <td>3412</td>
+                                            <td><button class="btn-block background-blue">Подробнее</button></td>
+                                        </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4">
+                        <div class="card m-b-30">
+                            <div class="card-body">
+                                <h4 class="mt-0 header-title">Полная мощность (Вт)</h4>
+
+                                <ul class="list-inline widget-chart m-t-20 text-center">
+                                    <li>
+                                        <h4 class=""><b>324,923</b></h4>
+                                        <p class="text-muted m-b-0">Общая</p>
+                                    </li>
+                                </ul>
+
+                                <div id="morris-full-power" style="height: 265px"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col-xl-3">
+                        <div class="card m-b-30">
+                            <div class="card-body">
+                                <h4 class="mt-0 header-title">Активная мощность (Вт)</h4>
+
+                                <ul class="list-inline widget-chart m-t-20 text-center">
+                                    <li>
+                                        <h4 class=""><b>324,923</b></h4>
+                                        <p class="text-muted m-b-0">Общая</p>
+                                    </li>
+                                </ul>
+
+                                <div id="morris-active-power" style="height: 265px"></div>
+                            </div>
+                        </div>
+                    </div>                    
+                    
+                    <div class="col-xl-3">
+                        <div class="card m-b-30">
+                            <div class="card-body">
+                                <h4 class="mt-0 header-title">Реактивная мощность (Вт)</h4>
+
+                                <ul class="list-inline widget-chart m-t-20 text-center">
+                                    <li>
+                                        <h4 class=""><b>324,923</b></h4>
+                                        <p class="text-muted m-b-0">Общая</p>
+                                    </li>
+                                </ul>
+
+                                <div id="morris-reactive-power" style="height: 265px"></div>
+                            </div>
+                        </div>
+                    </div>                    
+                    
+                    <div class="col-xl-3">
+                        <div class="card m-b-30">
+                            <div class="card-body">
+                                <h4 class="mt-0 header-title">Фазное напряжение (В)</h4>
+
+                                <ul class="list-inline widget-chart m-t-20 text-center">
+                                    <li>
+                                        <h4 class=""><b>324,923</b></h4>
+                                        <p class="text-muted m-b-0">Общая</p>
+                                    </li>
+                                </ul>
+
+                                <div id="morris-phase-voltage" style="height: 265px"></div>
+                            </div>
+                        </div>
+                    </div>                    
+                    
+                    <div class="col-xl-3">
+                        <div class="card m-b-30">
+                            <div class="card-body">
+                                <h4 class="mt-0 header-title">Ток фаза</h4>
+
+                                <ul class="list-inline widget-chart m-t-20 text-center">
+                                    <li>
+                                        <h4 class=""><b>324,923</b></h4>
+                                        <p class="text-muted m-b-0">Общая</p>
+                                    </li>
+                                </ul>
+
+                                <div id="morris-tok-phase" style="height: 265px"></div>
+                            </div>
+                        </div>
+                    </div>                    
+
+                    
+                </div>
+
+                
+                <!-- end row -->
+
+            </div> <!-- end container -->
+        </div>
+        <!-- end wrapper -->
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        © 2018 ОАО "Чакан ГЭС"
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/modernizr.min.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+        <script src="assets/js/jquery.nicescroll.js"></script>
+        <script src="assets/js/jquery.scrollTo.min.js"></script>
+
+        <!--Morris Chart-->
+        <script src="assets/plugins/morris/morris.min.js"></script>
+        <script src="assets/plugins/raphael/raphael-min.js"></script>
+
+        <script src="assets/pages/dashborad.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>
